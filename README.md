@@ -17,6 +17,10 @@
   - Secure Access: Login with protected routes ensures secure access for authorized users.
 
 - **Specific Constraints or Limitations:**
+  - Time Constraints: The project was supposed to be completed within 3 weeks
+  - Security constraints: 
+      - File Upload Security:  Need to Implement file scanning mechanisms to detect and prevent potential threats.
+  -  Scalability limitation: Handling an increased number of students may pose challenges for lecturers.
 
 
 ## Project Plan
@@ -107,17 +111,18 @@
 
   - Frontend:
 
-    - React
-    - Tailwind CSS
+    - ![React](https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge)
+    - ![Tailwind CSS](https://img.shields.io/badge/tailwindcss-0F172A?&logo=tailwindcss)
 
   - Backend:
 
-    - Spring Boot
-    - Java
+    - ![Java](https://img.shields.io/badge/Java-17-blue?logo=java&style=flat-square)
+
+    - ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3-green?logo=spring&style=flat-square)
 
   - Database:
 
-    - MySQL
+    - ![MySQL](https://img.shields.io/badge/MySQL-8-blue?logo=mysql&style=flat-square)
 
   - Dependencies:
 
