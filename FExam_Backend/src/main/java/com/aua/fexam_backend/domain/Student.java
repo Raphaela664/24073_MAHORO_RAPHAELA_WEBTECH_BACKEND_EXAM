@@ -24,25 +24,23 @@ public class Student {
     @JsonBackReference
     private List<Invitation> invitations;
 
+    @OneToMany(mappedBy = "student")
+    @JsonBackReference
+    private List<Submission> submissions;
+
+
 
     public Student() {
     }
 
-    public Student(Long student_id) {
-        this.student_id = student_id;
-    }
-
-    public Student(String email) {
-        this.email = email;
-    }
-
-
-
-    public Student(Long student_id, String name, String email, String password) {
+    public Student(Long student_id, String name, String email, String password, String role, List<Invitation> invitations, List<Submission> submissions) {
         this.student_id = student_id;
         this.name = name;
         this.email = email;
         this.password = password;
+        this.role = role;
+        this.invitations = invitations;
+        this.submissions = submissions;
     }
 
     public Long getStudent_id() {
@@ -79,5 +77,25 @@ public class Student {
 
     public String getRole() {
         return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public List<Invitation> getInvitations() {
+        return invitations;
+    }
+
+    public void setInvitations(List<Invitation> invitations) {
+        this.invitations = invitations;
+    }
+
+    public List<Submission> getSubmissions() {
+        return submissions;
+    }
+
+    public void setSubmissions(List<Submission> submissions) {
+        this.submissions = submissions;
     }
 }

@@ -27,16 +27,21 @@ public class Assignment {
     @JsonBackReference
     private List<Invitation> invitations;
 
+    @OneToMany(mappedBy = "assignment")
+    @JsonBackReference
+    private List<Submission> submissions;
+
     public Assignment() {
     }
 
-    public Assignment(long assignment_id, String title, String assignment_description, Date deadline, Lecturer lecturer, List<Invitation> invitations) {
+    public Assignment(long assignment_id, String title, String assignment_description, Date deadline, Lecturer lecturer, List<Invitation> invitations, List<Submission> submissions) {
         this.assignment_id = assignment_id;
         this.title = title;
         this.assignment_description = assignment_description;
         this.deadline = deadline;
         this.lecturer = lecturer;
         this.invitations = invitations;
+        this.submissions = submissions;
     }
 
     public long getAssignment_id() {
@@ -85,5 +90,13 @@ public class Assignment {
 
     public void setInvitations(List<Invitation> invitations) {
         this.invitations = invitations;
+    }
+
+    public List<Submission> getSubmissions() {
+        return submissions;
+    }
+
+    public void setSubmissions(List<Submission> submissions) {
+        this.submissions = submissions;
     }
 }

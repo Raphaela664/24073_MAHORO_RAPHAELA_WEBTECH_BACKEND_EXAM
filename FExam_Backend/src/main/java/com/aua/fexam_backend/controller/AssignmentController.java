@@ -118,7 +118,7 @@ public static class AssignmentRequest {
         }
     }
     @GetMapping(value = "/ViewSingleAssignment/{assignment_id}")
-    public ResponseEntity<Assignment> ViewAssignment(@RequestBody Long assignment_id) {
+    public ResponseEntity<Assignment> ViewAssignment(@PathVariable long assignment_id) {
         Assignment assignment = assignmentService.FindAssignment(assignment_id);
         if (assignment != null ) {
             return new ResponseEntity<>(assignment, HttpStatus.OK);
